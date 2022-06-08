@@ -1,0 +1,349 @@
+@font-face {
+    font-family: "Poppins-ExtraLight";
+    src: url("../url/Poppins-ExtraLight.ttf");
+}
+
+$color-text_white: white;
+$color-text_black: black;
+$fond-color_blue: #035772;
+$fond-color_white: #F6F9F5;
+$fond-color_blueciel: #7DAAB9;
+$size: 3.75rem;
+@mixin size_titles($size_T: $size) {
+    font-size: $size_T;
+}
+
+@mixin text_size {
+    font-size: 1rem;
+}
+
+%margin {
+    margin: 0 auto;
+}
+
+%text_center {
+    text-align: center;
+}
+
+%paddin_subscibe {
+    padding: 0.6rem 5rem 0.6rem 5rem;
+    background-color: $color-text_black;
+    color: $fond-color_white;
+}
+
+html,
+body {
+    @extend %margin;
+    background-color: $fond-color_blue;
+    font-family: "Poppins-ExtraLight";
+}
+
+.connect {
+    color: $color-text_black;
+    &_sous_menu {
+        color: $fond-color_blueciel;
+    }
+}
+
+header {
+    background-color: rgb(129, 171, 187);
+    nav {
+        /*On les aligne par block*/
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        @extend %margin;
+        font-size: 1.2em;
+        /*On aligne tout c qui se trouve dans nav à droite */
+        text-align: right;
+        .title-Site {
+            @extend %margin;
+            margin-left: 1rem;
+        }
+        ul {
+            >li {
+                list-style-type: none;
+                /*Pour aligner les éléments à l'horizontal */
+                display: inline;
+                /*---Pour les sous Menus */
+                >.sous_Menu {
+                    background-color: black;
+                    /*On fais en sorte que les sous ménus ne s'affichent pas au moment où y a pas de
+                    survole de la souris */
+                    display: none;
+                    position: absolute;
+                    padding: 0;
+                    right: 240px;
+                    /*On met en position libre */
+                    li {
+                        display: block;
+                        padding: 0;
+                        @extend %text_center;
+                        margin: 0rem 1rem 0.5rem 0.5rem;
+                        a {
+                            margin: 0;
+                            &:hover {
+                                color: $fond-color_blueciel;
+                            }
+                        }
+                    }
+                }
+                &:hover .sous_Menu {
+                    display: block;
+                }
+                a {
+                    /*On crèe des espaces entre les liens */
+                    margin: 0rem 2rem 0rem 2rem;
+                    color: $color-text_white;
+                    text-decoration: none;
+                    font-size: 1rem;
+                    &:hover {
+                        color: $color-text_black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*-------------------------Firts section --------------------*/
+
+.bande_principal {
+    background-color: $fond-color_white;
+    color: $color-text_black;
+    @extend %text_center;
+    padding: 0.063rem 0rem 9.063rem 0rem;
+    &_apropos {
+        width: 100%;
+        @extend %margin;
+        background-color: $fond-color_blue;
+        display: flex;
+        justify-content: center
+    }
+    &_bts {
+        width: 90%;
+        @extend %margin;
+        background-color: $fond-color_white;
+        h3 {
+            padding-top: 3rem;
+            margin-left: 5rem;
+        }
+        h4 {
+            @extend %text_center;
+        }
+        p,
+        ul>li {
+            list-style-type: square;
+            width: 70%;
+            @extend %margin;
+        }
+        padding-bottom: 2rem;
+    }
+    &_competences {
+        @include text_size;
+        margin-top: 2rem;
+        width: 70%;
+        @extend %margin;
+        color: $color-text_black;
+        background-color: $fond-color_white;
+        justify-content: center;
+        padding-top: 1rem;
+        padding-bottom: 4.5rem;
+        h1 {
+            @extend %text_center;
+        }
+        .competences {
+            >p {
+                margin: 1rem 0rem 1rem 2rem;
+            }
+            .pourcentage_competences {
+                width: 40%;
+                margin-right: 0;
+                border-radius: 0rem 1rem 1rem 0rem;
+                margin-left: 2rem;
+                background-color: $fond-color_blue;
+                .skill {
+                    text-align: right;
+                    border-radius: 0rem 1rem 1rem 0rem;
+                    background-color: $fond-color_blueciel;
+                }
+                .html {
+                    width: 85%;
+                }
+                .jS {
+                    width: 50%;
+                }
+                .php {
+                    width: 65%;
+                }
+                .python {
+                    width: 50%;
+                }
+            }
+        }
+        img {
+            float: right;
+        }
+    }
+    .banniere_principal {
+        @extend %margin;
+        .title_banniere {
+            @include size_titles;
+        }
+        p {
+            width: 42%;
+            @include text_size;
+            @extend %margin;
+        }
+    }
+}
+
+.button {
+    background-color: #F6F9F5;
+    @include text_size;
+    padding: 0.625rem 1.5rem 0.625rem 1.5rem;
+    margin-top: 2.5rem;
+    a {
+        text-decoration: none;
+        color: $color-text_black;
+        &:hover {
+            color: $color-text_white;
+        }
+    }
+    &:hover {
+        background-color: $fond-color_blue;
+    }
+    &_up {
+        margin-top: 0.9rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+}
+
+
+/*--------------Second section ----------------*/
+
+.bande_projet {
+    @extend %text_center;
+    padding-bottom: 5.063rem;
+    .title_banniere {
+        font-size: 2.5rem;
+        @extend %margin;
+        color: $fond-color_white;
+    }
+}
+
+
+/*--------------thirds --------------------------------*/
+
+@mixin color_input {
+    background-color: $fond-color_white;
+}
+
+.bande_contact {
+    background-color: $fond-color_white;
+    padding: 1rem;
+    @extend %text_center;
+    div>h4 {
+        font-size: 1.375rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .form-div_FL {
+        display: flex;
+        justify-content: center;
+        >div {
+            text-align: left;
+            margin: 0rem 8rem 2.59rem 2rem;
+            >input {
+                width: 150%;
+                height: 65%;
+                @include color_input;
+            }
+        }
+    }
+    .message_form {
+        textarea {
+            @include color_input;
+        }
+        input[type="submit"] {
+            margin-top: 2.2rem;
+            @include text_size;
+            @extend %paddin_subscibe;
+        }
+    }
+}
+
+p {
+    @include text_size;
+}
+
+
+/*------------------section contact------------*/
+
+.bande_join_email {
+    background-color: $fond-color_blueciel;
+    @extend %text_center;
+    width: 90%;
+    padding-top: 1rem;
+    margin: 0rem 0rem 0rem 4rem;
+    div {
+        text-align: left;
+        padding-left: 2rem;
+        padding-bottom: 3rem;
+    }
+    input[type="email"] {
+        width: 40%;
+        border: 1px solid $color-text_black;
+        height: 2.5rem;
+        background-color: $fond-color_blueciel;
+    }
+    input[type="submit"] {
+        margin-left: 1.5rem;
+        @extend %paddin_subscibe;
+        @include text_size;
+    }
+}
+
+
+/*---------SECTION A PROPOS -------------*/
+
+.presentation {
+    width: 50%;
+    h1 {
+        @extend %text_center;
+        color: $color-text_white;
+    }
+    h3 {
+        margin-top: 8rem;
+        color: $color-text_white;
+        text-align: center;
+    }
+    p {
+        width: 83%;
+        @extend %text_center;
+        text-align: justify;
+        margin-left: 3rem;
+        margin-right: 1rem;
+        font-size: 0.9rem;
+        color: $color-text_white;
+    }
+}
+
+.image_1 {
+    border-radius: 2rem 0rem 0rem 2rem;
+}
+
+.image_2 {
+    border-radius: 0rem 2rem 2rem 0rem;
+}
+
+footer {
+    @extend %text_center;
+    font-size: 0.6rem;
+}
+
+.iframe {
+    text-align: center;
+}

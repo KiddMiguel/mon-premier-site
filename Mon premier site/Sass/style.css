@@ -1,0 +1,348 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Poppins-ExtraLight";
+  src: url("../url/Poppins-ExtraLight.ttf");
+}
+
+html,
+body, header nav, header nav .title-Site, .bande_principal_apropos, .bande_principal_bts, .bande_principal_bts p,
+.bande_principal_bts ul > li, .bande_principal_competences, .bande_principal .banniere_principal, .bande_principal .banniere_principal p, .bande_projet .title_banniere {
+  margin: 0 auto;
+}
+
+header nav ul > li > .sous_Menu li, .bande_principal, .bande_principal_bts h4, .bande_principal_competences h1, .bande_projet, .bande_contact, .bande_join_email, .presentation h1, .presentation p, footer {
+  text-align: center;
+}
+
+.bande_contact .message_form input[type="submit"], .bande_join_email input[type="submit"] {
+  padding: 0.6rem 5rem 0.6rem 5rem;
+  background-color: black;
+  color: #F6F9F5;
+}
+
+html,
+body {
+  background-color: #035772;
+  font-family: "Poppins-ExtraLight";
+}
+
+.connect {
+  color: black;
+}
+
+.connect_sous_menu {
+  color: #7DAAB9;
+}
+
+header {
+  background-color: #81abbb;
+}
+
+header nav {
+  /*On les aligne par block*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  font-size: 1.2em;
+  /*On aligne tout c qui se trouve dans nav à droite */
+  text-align: right;
+}
+
+header nav .title-Site {
+  margin-left: 1rem;
+}
+
+header nav ul > li {
+  list-style-type: none;
+  /*Pour aligner les éléments à l'horizontal */
+  display: inline;
+  /*---Pour les sous Menus */
+}
+
+header nav ul > li > .sous_Menu {
+  background-color: black;
+  /*On fais en sorte que les sous ménus ne s'affichent pas au moment où y a pas de
+                    survole de la souris */
+  display: none;
+  position: absolute;
+  padding: 0;
+  right: 240px;
+  /*On met en position libre */
+}
+
+header nav ul > li > .sous_Menu li {
+  display: block;
+  padding: 0;
+  margin: 0rem 1rem 0.5rem 0.5rem;
+}
+
+header nav ul > li > .sous_Menu li a {
+  margin: 0;
+}
+
+header nav ul > li > .sous_Menu li a:hover {
+  color: #7DAAB9;
+}
+
+header nav ul > li:hover .sous_Menu {
+  display: block;
+}
+
+header nav ul > li a {
+  /*On crèe des espaces entre les liens */
+  margin: 0rem 2rem 0rem 2rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+header nav ul > li a:hover {
+  color: black;
+}
+
+/*-------------------------Firts section --------------------*/
+.bande_principal {
+  background-color: #F6F9F5;
+  color: black;
+  padding: 0.063rem 0rem 9.063rem 0rem;
+}
+
+.bande_principal_apropos {
+  width: 100%;
+  background-color: #035772;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bande_principal_bts {
+  width: 90%;
+  background-color: #F6F9F5;
+  padding-bottom: 2rem;
+}
+
+.bande_principal_bts h3 {
+  padding-top: 3rem;
+  margin-left: 5rem;
+}
+
+.bande_principal_bts p,
+.bande_principal_bts ul > li {
+  list-style-type: square;
+  width: 70%;
+}
+
+.bande_principal_competences {
+  font-size: 1rem;
+  margin-top: 2rem;
+  width: 70%;
+  color: black;
+  background-color: #F6F9F5;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 4.5rem;
+}
+
+.bande_principal_competences .competences > p {
+  margin: 1rem 0rem 1rem 2rem;
+}
+
+.bande_principal_competences .competences .pourcentage_competences {
+  width: 40%;
+  margin-right: 0;
+  border-radius: 0rem 1rem 1rem 0rem;
+  margin-left: 2rem;
+  background-color: #035772;
+}
+
+.bande_principal_competences .competences .pourcentage_competences .skill {
+  text-align: right;
+  border-radius: 0rem 1rem 1rem 0rem;
+  background-color: #7DAAB9;
+}
+
+.bande_principal_competences .competences .pourcentage_competences .html {
+  width: 85%;
+}
+
+.bande_principal_competences .competences .pourcentage_competences .jS {
+  width: 50%;
+}
+
+.bande_principal_competences .competences .pourcentage_competences .php {
+  width: 65%;
+}
+
+.bande_principal_competences .competences .pourcentage_competences .python {
+  width: 50%;
+}
+
+.bande_principal_competences img {
+  float: right;
+}
+
+.bande_principal .banniere_principal .title_banniere {
+  font-size: 3.75rem;
+}
+
+.bande_principal .banniere_principal p {
+  width: 42%;
+  font-size: 1rem;
+}
+
+.button {
+  background-color: #F6F9F5;
+  font-size: 1rem;
+  padding: 0.625rem 1.5rem 0.625rem 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.button a {
+  text-decoration: none;
+  color: black;
+}
+
+.button a:hover {
+  color: white;
+}
+
+.button:hover {
+  background-color: #035772;
+}
+
+.button_up {
+  margin-top: 0.9rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/*--------------Second section ----------------*/
+.bande_projet {
+  padding-bottom: 5.063rem;
+}
+
+.bande_projet .title_banniere {
+  font-size: 2.5rem;
+  color: #F6F9F5;
+}
+
+/*--------------thirds --------------------------------*/
+.bande_contact {
+  background-color: #F6F9F5;
+  padding: 1rem;
+}
+
+.bande_contact div > h4 {
+  font-size: 1.375rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.bande_contact .form-div_FL {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bande_contact .form-div_FL > div {
+  text-align: left;
+  margin: 0rem 8rem 2.59rem 2rem;
+}
+
+.bande_contact .form-div_FL > div > input {
+  width: 150%;
+  height: 65%;
+  background-color: #F6F9F5;
+}
+
+.bande_contact .message_form textarea {
+  background-color: #F6F9F5;
+}
+
+.bande_contact .message_form input[type="submit"] {
+  margin-top: 2.2rem;
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+/*------------------section contact------------*/
+.bande_join_email {
+  background-color: #7DAAB9;
+  width: 90%;
+  padding-top: 1rem;
+  margin: 0rem 0rem 0rem 4rem;
+}
+
+.bande_join_email div {
+  text-align: left;
+  padding-left: 2rem;
+  padding-bottom: 3rem;
+}
+
+.bande_join_email input[type="email"] {
+  width: 40%;
+  border: 1px solid black;
+  height: 2.5rem;
+  background-color: #7DAAB9;
+}
+
+.bande_join_email input[type="submit"] {
+  margin-left: 1.5rem;
+  font-size: 1rem;
+}
+
+/*---------SECTION A PROPOS -------------*/
+.presentation {
+  width: 50%;
+}
+
+.presentation h1 {
+  color: white;
+}
+
+.presentation h3 {
+  margin-top: 8rem;
+  color: white;
+  text-align: center;
+}
+
+.presentation p {
+  width: 83%;
+  text-align: justify;
+  margin-left: 3rem;
+  margin-right: 1rem;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.image_1 {
+  border-radius: 2rem 0rem 0rem 2rem;
+}
+
+.image_2 {
+  border-radius: 0rem 2rem 2rem 0rem;
+}
+
+footer {
+  font-size: 0.6rem;
+}
+
+.iframe {
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
